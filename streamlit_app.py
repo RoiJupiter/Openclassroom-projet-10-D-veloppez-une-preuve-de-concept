@@ -1,25 +1,27 @@
 import streamlit as st
 import pandas as pd
-import tensorflow as tf
+
 from keras_preprocessing.sequence import pad_sequences
 from tensorflow import keras
-import re
-import pickle
 
+import pickle
 from keras import backend as K
 
-var = '''
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
 #local variables
 var_model_path = 'D:/anaconda3/envs/env1/notebooks/OP Notebooks/p10/Github/mon_model.h5'
 var_word_embeding_path = 'D:/anaconda3/envs/env1/notebooks/OP Notebooks/p10/Github/tokenizer_GLOVE_LSTM_traite.pkl'
-var_dataset_path = 'D:/anaconda3\envs\env1/notebooks\OP Notebooks\p10\Github/df.csv'
+var_dataset_summary = 'D:/anaconda3\envs\env1/notebooks\OP Notebooks\p10\Github/summary.csv'
 '''
 
 #variables
 var_model_path = 'mon_model.h5'
 var_word_embeding_path = 'tokenizer_GLOVE_LSTM_traite.pkl'
-var_dataset_path = 'df.csv'
-
+var_dataset_summary = 'summary.csv'
+var = '''
 # Fonctions pour les métriques personnalisées
 def recall(y_true, y_pred):
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
@@ -87,16 +89,26 @@ if st.button('Analyser le Sentiment'):
 
 
 # Charger votre DataFrame (remplacez ceci par vos données)
-df = pd.read_csv(var_dataset_path, encoding = "ISO-8859-1" , names= ["target", "ids", "date", "flag", "user", "text"])
+df = pd.read_csv(var_dataset_summary)
 
 # Titre de l'application
 st.title('Analyse Statistique')
-
-# Afficher le DataFrame (optionnel)
-st.write("Affichage des données brutes (5) :")
-st.dataframe(df.head(5))
 
 # Analyse statistique avec describe()
 st.write("Analyse statistique des données :")
 st.write(df.describe())
 
+
+# Titre de l'application
+st.title("Affichage de la distribution de classe")
+
+# Chargez et affichez l'image PNG
+image = "class_distribution.png"  # Remplacez "mon_graphique.png" par le chemin vers votre image PNG
+st.image(image, caption="Distribution de la classe target", use_column_width=True)
+
+# Titre de l'application
+st.title("Affichage de la distribution de classe")
+
+# Chargez et affichez l'image PNG
+wordwloud = "wordcloud.png"  # Remplacez "mon_graphique.png" par le chemin vers votre image PNG
+st.image(wordwloud, caption="Wordcloud du dataset", use_column_width=True)
