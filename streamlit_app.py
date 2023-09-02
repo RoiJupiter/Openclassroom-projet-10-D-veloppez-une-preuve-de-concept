@@ -100,7 +100,7 @@ image = "class_distribution.png"  # Remplacez "mon_graphique.png" par le chemin 
 st.image(image, caption="Distribution de la classe target", use_column_width=True)
 
 # Titre de l'application
-st.title("Affichage de la distribution de classe")
+st.title("Affichage du Wordcloud")
 
 # Chargez et affichez l'image PNG
 wordwloud = "wordcloud.png"  # Remplacez "mon_graphique.png" par le chemin vers votre image PNG
