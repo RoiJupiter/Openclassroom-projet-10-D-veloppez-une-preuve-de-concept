@@ -8,7 +8,6 @@ import pickle
 from keras import backend as K
 
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 
 #local variables
