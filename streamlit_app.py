@@ -7,8 +7,7 @@ from tensorflow import keras
 import pickle
 from keras import backend as K
 
-
-#local variables
+var = '''#local variables
 var_model_path = 'D:/anaconda3/envs/env1/notebooks/OP Notebooks/p10/Github/mon_model.h5'
 var_word_embeding_path = 'D:/anaconda3/envs/env1/notebooks/OP Notebooks/p10/Github/tokenizer_GLOVE_LSTM_traite.pkl'
 var_dataset_summary = 'D:/anaconda3\envs\env1/notebooks\OP Notebooks\p10\Github/summary.csv'
@@ -18,7 +17,7 @@ var_dataset_summary = 'D:/anaconda3\envs\env1/notebooks\OP Notebooks\p10\Github/
 var_model_path = 'mon_model.h5'
 var_word_embeding_path = 'tokenizer_GLOVE_LSTM_traite.pkl'
 var_dataset_summary = 'summary.csv'
-var = '''
+
 # Fonctions pour les métriques personnalisées
 def recall(y_true, y_pred):
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
