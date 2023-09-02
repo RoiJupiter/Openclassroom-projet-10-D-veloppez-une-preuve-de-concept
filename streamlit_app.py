@@ -67,10 +67,7 @@ def predict(text):
 st.title('Analyse de Sentiment des Tweets')
 
 # Texte d'instructions
-st.write('Entrez un tweet dans la zone de texte ci-dessus et cliquez sur "Analyser le Sentiment" pour obtenir une prédiction de sentiment.')
-
-# Note de fin
-st.write('Ce modèle d\'analyse de sentiment a été créé à des fins de démonstration.')
+st.write('Entrez un tweet dans la zone de texte ci-dessus et cliquez sur "Analyser le Sentiment" pour obtenir une prédiction de sentiment !')
 
 # Zone de texte pour saisir le tweet
 tweet_input = st.text_area('Saisissez votre tweet ici :')
