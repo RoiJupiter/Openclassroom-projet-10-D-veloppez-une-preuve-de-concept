@@ -7,7 +7,8 @@ import re
 import pickle
 
 from keras import backend as K
-'''
+
+var = '''
 #local variables
 var_model_path = 'D:/anaconda3/envs/env1/notebooks/OP Notebooks/p10/Github/mon_model.h5'
 var_word_embeding_path = 'D:/anaconda3/envs/env1/notebooks/OP Notebooks/p10/Github/tokenizer_GLOVE_LSTM_traite.pkl'
