@@ -7,11 +7,17 @@ import re
 import pickle
 
 from keras import backend as K
-
+'''
 #local variables
 var_model_path = 'D:/anaconda3/envs/env1/notebooks/OP Notebooks/p10/Github/mon_model.h5'
 var_word_embeding_path = 'D:/anaconda3/envs/env1/notebooks/OP Notebooks/p10/Github/tokenizer_GLOVE_LSTM_traite.pkl'
 var_dataset_path = 'D:/anaconda3\envs\env1/notebooks\OP Notebooks\p10\Github/df.csv'
+'''
+
+#variables
+var_model_path = 'mon_model.h5'
+var_word_embeding_path = 'tokenizer_GLOVE_LSTM_traite.pkl'
+var_dataset_path = 'df.csv'
 
 # Fonctions pour les métriques personnalisées
 def recall(y_true, y_pred):
