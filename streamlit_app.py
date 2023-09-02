@@ -7,8 +7,6 @@ from tensorflow import keras
 import pickle
 from keras import backend as K
 
-import matplotlib.pyplot as plt
-
 
 #local variables
 var_model_path = 'D:/anaconda3/envs/env1/notebooks/OP Notebooks/p10/Github/mon_model.h5'

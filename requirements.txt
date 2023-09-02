@@ -3,4 +3,3 @@ pandas
 tensorflow
 keras
 keras_preprocessing
-matplotlib.pyplot
