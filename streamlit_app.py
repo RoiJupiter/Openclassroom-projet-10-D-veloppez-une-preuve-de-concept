@@ -81,27 +81,23 @@ if st.button('Analyser le Sentiment'):
         st.warning('Veuillez saisir un tweet pour l\'analyse.')
 
 
-# Charger votre DataFrame (remplacez ceci par vos données)
-df = pd.read_csv(var_dataset_summary)
-
 # Titre de l'application
-st.title('Analyse Statistique')
-
-# Analyse statistique avec describe()
-st.write("Analyse statistique des données :")
-st.write(df.describe())
-
-
-# Titre de l'application
-st.title("Affichage de la distribution de classe")
+st.title("Data Analyse")
 
 # Chargez et affichez l'image PNG
 image = "class_distribution.png"  # Remplacez "mon_graphique.png" par le chemin vers votre image PNG
 st.image(image, caption="Distribution de la classe target", use_column_width=True)
 
 # Titre de l'application
-st.title("Affichage du Wordcloud")
+st.title("Affichage de l'ancien Wordcloud")
 
 # Chargez et affichez l'image PNG
 wordwloud = "wordcloud.png"  # Remplacez "mon_graphique.png" par le chemin vers votre image PNG
 st.image(wordwloud, caption="Wordcloud du dataset", use_column_width=True)
+
+# Titre de l'application
+st.title("Affichage du nouveau Wordcloud")
+
+# Chargez et affichez l'image PNG
+wordcloud2 = "wordcloud2.png"  # Remplacez "mon_graphique.png" par le chemin vers votre image PNG
+st.image(wordcloud2, caption="Wordcloud du dataset", use_column_width=True)
